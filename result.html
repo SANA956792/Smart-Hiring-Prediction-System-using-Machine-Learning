@@ -1,0 +1,41 @@
+templates/result.html - Result page
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prediction Result</title>
+    <style>
+        body { font-family: Arial, sans-serif; max-width: 700px; margin: 60px auto; text-align: center; background: #f9f9f9; }
+        .container { background: white; padding: 40px; border-radius: 12px; box-shadow: 0 6px 20px rgba(0,0,0,0.12); }
+        h1 { color: #2c3e50; }
+        .result { font-size: 2.8rem; margin: 30px 0; font-weight: bold; }
+        .success { color: #27ae60; }
+        .fail { color: #e74c3c; }
+        .prob { font-size: 1.5rem; margin: 20px 0; }
+        .error { color: #c0392b; font-size: 1.3rem; }
+        .btn { display: inline-block; padding: 14px 40px; background: #3498db; color: white; text-decoration: none; border-radius: 6px; font-size: 1.2rem; }
+        .btn:hover { background: #2980b9; }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h1>Prediction Result</h1>
+
+    {% if 'Error' in prediction_text %}
+        <p class="error">{{ prediction_text }}</p>
+    {% elif prediction_text == "Hired ✓" %}
+        <div class="result success">{{ prediction_text }}</div>
+    {% else %}
+        <div class="result fail">{{ prediction_text }}</div>
+    {% endif %}
+
+    {% if probability %}
+        <div class="prob">Probability: <strong>{{ probability }}</strong></div>
+    {% endif %}
+
+    <a href="/" class="btn">Try Another</a>
+</div>
+</body>
+</html>
