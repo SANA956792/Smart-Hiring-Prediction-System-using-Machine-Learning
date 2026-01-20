@@ -1,10 +1,7 @@
 # Smart Hiring Prediction System using Machine Learning
 
-<p align="center">
-  <img src="https://via.placeholder.com/1200x300/4A90E2/FFFFFF?text=Smart+Hiring+Prediction+System+-+Fair+AI+Recruitment" alt="Project Banner">
-  <br>
-  <em>Machine learning-powered hiring decision predictor with fairness analysis</em>
-</p>
+dataset link:
+https://www.kaggle.com/datasets/roiiith/ai-fair-recrutment-dataset/data
 
 ## 🎯 Problem Statement
 
