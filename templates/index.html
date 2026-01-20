@@ -1,0 +1,88 @@
+
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Hiring Predictor 🧑‍💼</title>
+    <style>
+        body { font-family: system-ui, sans-serif; max-width: 680px; margin: 2rem auto; padding: 1rem; background: #f8fafc; }
+        h1 { text-align: center; color: #1e293b; }
+        .form-container { background: rgb(255, 253, 253); padding: 2rem; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.08); }
+        label { display: block; margin: 1.2rem 0 0.4rem; font-weight: 600; color: #334155; }
+        input, select { width: 100%; padding: 0.75rem; border: 1px solid #cbd5e1; border-radius: 6px; font-size: 1rem; }
+        button { width: 100%; padding: 1rem; margin-top: 1.8rem; background: #3b41f6; color: white; border: none; border-radius: 8px; font-size: 1.1rem; cursor: pointer; }
+        button:hover { background: #4460d2; }
+    </style>
+</head>
+<body>
+<div class="form-container">
+    <h1>AI Recruitment Predictor</h1>
+
+    <form action="/predict" method="POST">
+        <label>Gender</label>
+        <select name="Gender" required>
+            <option value="">Select...</option>
+            <option value="Male">Male</option>
+            <option value="Female">Female</option>
+            <option value="Other">Other</option>
+        </select>
+
+        <label>Age</label>
+        <input type="number" name="Age" min="18" max="80" required>
+
+        <label>Education Level</label>
+        <select name="Education_Level" required>
+            <option value="">Select...</option>
+            <option value="Bachelors">Bachelors</option>
+            <option value="Masters">Masters</option>
+            <option value="PhD">PhD</option>
+            <option value="Diploma">Diploma</option>
+        </select>
+
+        <label>Experience Level</label>
+        <select name="Experience_Level" required>
+            <option value="">Select...</option>
+            <option value="Junior">Junior (0–3 years)</option>
+            <option value="Mid">Mid (4–8 years)</option>
+            <option value="Senior">Senior (9+ years)</option>
+        </select>
+
+        <label>Number of Certifications</label>
+        <input type="number" name="Certifications_Count" min="0" max="20" required>
+
+        <label>Previous Companies</label>
+        <input type="number" name="Previous_Companies" min="0" max="30" required>
+
+        <label>Interview Score (0–100)</label>
+        <input type="number" name="Interview_Score" min="0" max="100" required>
+
+        <label>Location</label>
+        <select name="Location" required>
+            <option value="">Select...</option>
+            <option value="Urban">Urban</option>
+            <option value="Semi-Urban">Semi-Urban</option>
+            <option value="Rural">Rural</option>
+        </select>
+
+        <label>Job Role Applied For</label>
+        <select name="Job_Role_Applied" required>
+            <option value="">Select...</option>
+            <option value="HR Executive">HR Executive</option>
+            <option value="Data Analyst">Data Analyst</option>
+            <option value="ML Engineer">ML Engineer</option>
+            <option value="Software Engineer">Software Engineer</option>
+            <option value="Manager">Manager</option>
+        </select>
+
+        <label>Expected Salary (₹)</label>
+        <input type="number" name="Expected_Salary" min="10000" required>
+
+        <label>Total Skill Score (sum of all skill tests)</label>
+        <input type="number" name="Total_Skill_Score" min="0" max="500" required>
+
+        <button type="submit">Get Prediction</button>
+    </form>
+</div>
+</body>
+</html>
