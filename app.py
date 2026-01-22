@@ -1,6 +1,4 @@
 
-
-
 from flask import Flask, render_template, request
 import pickle
 import pandas as pd
@@ -31,12 +29,13 @@ FEATURE_ORDER = [
     'Total_Skill_Score'
 ]
 
-# Encoding mappings — must match what LabelEncoder / manual mapping used in notebook
+# Encoding mappings — must match what LabelEncoder / manual mapping used in noteb
 EXPERIENCE_LEVEL_MAP = {
     'Junior': 0,
     'Mid':    1,
     'Senior': 2
 }
+
 GENDER_MAP = {
     'Female': 0,
     'Male':   1,
