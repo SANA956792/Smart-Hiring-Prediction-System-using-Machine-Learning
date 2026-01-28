@@ -56,6 +56,13 @@ Build a machine learning classification model that predicts hiring decisions bas
 | Visualization       | Matplotlib, Seaborn                 |
 | Notebook            | Jupyter                             |
 | Version Control     | Git / GitHub                        |
+## 📸 Project Screenshots
+
+### 🔹 Home Page
+![Home Page](https://github.com/SANA956792/Smart-Hiring-Prediction-System-using-Machine-Learning/blob/main/image/Screenshot%202026-01-28%20151046.png)
+
+### 🔹 Result Page
+![Result Page](https://github.com/SANA956792/Smart-Hiring-Prediction-System-using-Machine-Learning/blob/main/image/Screenshot%202026-01-28%20161329.png)
 
 ## 🚀 Quick Start (Local Setup)
 
